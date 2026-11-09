@@ -11,12 +11,16 @@ texts/    (later) terminology overlays -- slot texts of velo (FE-133)
 
 Each subdirectory carries its own `primer-package.yaml`; ONE tag `vX.Y.Z`
 versions them together, and both slots of an instance take this repository
-by that tag through `subpath` in the passport:
+by that tag through `subpath` in the passport (the form of the machine's
+reference `primer-blank-brand`; `subpath` is required -- the repository root
+is not a package):
 
 ```yaml
 packages:
-  skin: { repo: VELO2026-app/goodo-brand, version: v0.1.0, subpath: skin }
+  skin: { repo: git@github.com:VELO2026-app/goodo-brand.git, version: 0.1.1, subpath: skin }
 ```
+
+The repository is private: the machine reads it with its deploy key.
 
 Releases are tags; a released tag is never moved -- an instance goes back to
 a look by its tag. The format and its checks are defined by the product:

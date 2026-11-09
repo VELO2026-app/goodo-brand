@@ -5,7 +5,7 @@
         "$value": "#120054"
       },
       "bg": {
-        "$value": "#85B8CB",
+        "$value": "#8EE2C6",
         "kbd": {
           "$value": "#425C65"
         }
@@ -13,7 +13,7 @@
     },
     "bg": {
       "start": {
-        "$value": "#85B8CB"
+        "$value": "#8EE2C6"
       }
     },
     "primary": {

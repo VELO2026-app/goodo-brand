@@ -3,8 +3,8 @@
 Source: the Goodo App Figma file, screens Calendar (31:4), Diary map (31:335)
 and Analytics / reviews (35:771); the token-by-token comparison with the velo
 registry lives on the Figma page `front`, section «Goodo vs velo — token
-diff». Converted from velo branch `bb/goodo-app-thr_eah6rgcyuk` (9b0706c5,
-skin generation 1) by `frontend/scripts/skin-to-dtcg.mjs` (FE-131).
+diff». Converted from the velo skin of generation 1 by
+`frontend/scripts/skin-to-dtcg.mjs` (velo FE-131).
 
 ```
 primer-package.yaml          schema: 1, contract: "1.0"
@@ -20,7 +20,7 @@ assets/                      logos, PWA icons, favicon; assets/bg/
 | name | value | where |
 |---|---|---|
 | ink | `#120054` | text, primary, outlines, tab-bar disc, Telegram header |
-| mint | `#8EE2C6` | screen base, manifest background |
+| mint | `#8EE2C6` | screen base (`velo.bg.start`, `velo.tg.bg`), manifest background |
 | lavender | `#B1A5FF` | illustrations, analytics "not great" |
 | done | `#A1E0C7` on `#005409` | paid / done badge |
 | green | `#00AE69` | check mark, analytics "good" |
