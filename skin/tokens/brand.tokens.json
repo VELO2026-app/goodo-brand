@@ -1,0 +1,10 @@
+{
+  "$extensions": {
+    "velo-skin": {
+      "displayName": "Goodo",
+      "shortName": "Goodo",
+      "themeColor": "#120054",
+      "backgroundColor": "#8EE2C6"
+    }
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "velo": {
+    "tg": {
+      "header": {
+        "$value": "#120054"
+      },
+      "bg": {
+        "$value": "#85B8CB",
+        "kbd": {
+          "$value": "#425C65"
+        }
+      }
+    },
+    "bg": {
+      "start": {
+        "$value": "#85B8CB"
+      }
+    },
+    "primary": {
+      "$value": "#120054",
+      "dark": {
+        "$value": "#120054"
+      }
+    },
+    "blue": {
+      "100": {
+        "$value": "#D8D2FF"
+      },
+      "200": {
+        "$value": "#B1A5FF"
+      },
+      "300": {
+        "$value": "#B8B2CE"
+      },
+      "400": {
+        "$value": "#70A8C8"
+      },
+      "500": {
+        "$value": "#120054"
+      },
+      "700": {
+        "$value": "#120054"
+      }
+    },
+    "text": {
+      "primary": {
+        "$value": "#120054"
+      },
+      "secondary": {
+        "$value": "rgba(18, 0, 84, 0.6)"
+      },
+      "muted": {
+        "$value": "rgba(18, 0, 84, 0.5)"
+      },
+      "placeholder": {
+        "$value": "rgba(18, 0, 84, 0.6)",
+        "faint": {
+          "$value": "rgba(18, 0, 84, 0.58)"
+        }
+      }
+    },
+    "border": {
+      "$value": "#120054",
+      "light": {
+        "$value": "rgba(18, 0, 84, 0.15)"
+      }
+    },
+    "nav": {
+      "active": {
+        "bg": {
+          "glass": {
+            "$value": "#120054"
+          }
+        }
+      },
+      "inactive": {
+        "bg": {
+          "$value": "rgba(18, 0, 84, 0.15)"
+        }
+      }
+    },
+    "success": {
+      "$value": "#00AE69",
+      "bg": {
+        "$value": "#A1E0C7"
+      },
+      "text": {
+        "$value": "#005409"
+      }
+    },
+    "glass": {
+      "teal": {
+        "30": {
+          "$value": "#A1E0C7"
+        }
+      }
+    },
+    "teal": {
+      "400": {
+        "$value": "#8EE2C6"
+      },
+      "600": {
+        "$value": "#005409"
+      }
+    },
+    "analytics": {
+      "fire": {
+        "$value": "#A1E0C7"
+      },
+      "good": {
+        "$value": "#00AE69"
+      },
+      "neutral": {
+        "$value": "#70A8C8"
+      },
+      "low": {
+        "$value": "#B1A5FF"
+      },
+      "bad": {
+        "$value": "#726BCF"
+      }
+    },
+    "required": {
+      "done": {
+        "$value": "#00AE69"
+      }
+    },
+    "sand": {
+      "100": {
+        "$value": "#DDF5EC"
+      }
+    },
+    "mood": {
+      "low": {
+        "$value": "#726BCF"
+      },
+      "mid": {
+        "$value": "#70A8C8"
+      },
+      "high": {
+        "$value": "#00AE69"
+      },
+      "fill": {
+        "rose": {
+          "$value": "#D8D2FF"
+        },
+        "peach": {
+          "$value": "#C6DCE9"
+        },
+        "teal": {
+          "$value": "#D0EFE3"
+        }
+      }
+    },
+    "rating": {
+      "confused": {
+        "$value": "#70A8C8"
+      },
+      "good": {
+        "$value": "#00AE69"
+      },
+      "fire": {
+        "$value": "#A1E0C7"
+      }
+    }
+  }
+}
