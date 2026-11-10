@@ -81,9 +81,6 @@
     },
     "success": {
       "$value": "#00AE69",
-      "bg": {
-        "$value": "#A1E0C7"
-      },
       "text": {
         "$value": "#005409"
       }
@@ -131,15 +128,6 @@
       }
     },
     "mood": {
-      "low": {
-        "$value": "#726BCF"
-      },
-      "mid": {
-        "$value": "#70A8C8"
-      },
-      "high": {
-        "$value": "#00AE69"
-      },
       "fill": {
         "rose": {
           "$value": "#D8D2FF"
@@ -153,14 +141,8 @@
       }
     },
     "rating": {
-      "confused": {
-        "$value": "#70A8C8"
-      },
       "good": {
         "$value": "#00AE69"
-      },
-      "fire": {
-        "$value": "#A1E0C7"
       }
     }
   }

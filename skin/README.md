@@ -7,7 +7,7 @@ diff». Converted from the velo skin of generation 1 by
 `frontend/scripts/skin-to-dtcg.mjs` (velo FE-131).
 
 ```
-primer-package.yaml          schema: 1, contract: "1.0"
+primer-package.yaml          schema: 1, contract: "2.0" (velo token generation 2)
 tokens/brand.tokens.json     $extensions["velo-skin"]: displayName, shortName,
                              themeColor, backgroundColor, fonts?
 tokens/skin.tokens.json      W3C DTCG overrides at the paths of velo's
