@@ -17,7 +17,7 @@ is not a package):
 
 ```yaml
 packages:
-  skin: { repo: git@github.com:VELO2026-app/goodo-brand.git, version: 0.2.0, subpath: skin }
+  skin: { repo: git@github.com:VELO2026-app/goodo-brand.git, version: 0.3.0, subpath: skin }
 ```
 
 The repository is private: the machine reads it with its deploy key.

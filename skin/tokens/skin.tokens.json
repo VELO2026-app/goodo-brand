@@ -47,15 +47,25 @@
         "$value": "#120054"
       },
       "secondary": {
-        "$value": "rgba(18, 0, 84, 0.6)"
+        "$value": "rgba(18, 0, 84, 0.67)"
       },
       "muted": {
-        "$value": "rgba(18, 0, 84, 0.5)"
+        "$value": "rgba(18, 0, 84, 0.58)"
       },
       "placeholder": {
         "$value": "rgba(18, 0, 84, 0.6)",
         "faint": {
           "$value": "rgba(18, 0, 84, 0.58)"
+        }
+      },
+      "on": {
+        "bg": {
+          "secondary": {
+            "$value": "rgba(18, 0, 84, 0.82)"
+          },
+          "muted": {
+            "$value": "rgba(18, 0, 84, 0.82)"
+          }
         }
       }
     },
@@ -89,6 +99,11 @@
       "teal": {
         "30": {
           "$value": "#A1E0C7"
+        }
+      },
+      "pink": {
+        "40": {
+          "$value": "color-mix(in srgb, var(--velo-pink-100) 85%, transparent)"
         }
       }
     },
@@ -143,6 +158,64 @@
     "rating": {
       "good": {
         "$value": "#00AE69"
+      }
+    },
+    "frost": {
+      "border": {
+        "$value": "#120054"
+      },
+      "bg": {
+        "$value": "rgba(18, 0, 84, 0.15)"
+      }
+    },
+    "control": {
+      "border": {
+        "$value": "#120054"
+      }
+    },
+    "on": {
+      "primary": {
+        "$value": "#8EE2C6"
+      }
+    },
+    "picker": {
+      "bg": {
+        "$value": "transparent"
+      },
+      "fg": {
+        "$value": "#120054"
+      }
+    },
+    "pink": {
+      "300": {
+        "$value": "#B3283F"
+      },
+      "700": {
+        "$value": "#7A2230"
+      }
+    },
+    "peach": {
+      "500": {
+        "$value": "#5B3714"
+      },
+      "700": {
+        "$value": "#8A5320"
+      },
+      "800": {
+        "$value": "#9A4709"
+      }
+    },
+    "back": {
+      "bg": {
+        "$value": "#120054"
+      },
+      "fg": {
+        "$value": "#8EE2C6"
+      },
+      "glass": {
+        "bg": {
+          "$value": "#120054"
+        }
       }
     }
   }
