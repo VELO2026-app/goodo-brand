@@ -19,7 +19,7 @@
     "primary": {
       "$value": "#120054",
       "dark": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       }
     },
     "blue": {
@@ -36,15 +36,15 @@
         "$value": "#70A8C8"
       },
       "500": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       },
       "700": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       }
     },
     "text": {
       "primary": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       },
       "secondary": {
         "$value": "rgba(18, 0, 84, 0.67)"
@@ -61,16 +61,16 @@
       "on": {
         "bg": {
           "secondary": {
-            "$value": "rgba(18, 0, 84, 0.82)"
+            "$value": "{velo.primary}"
           },
           "muted": {
-            "$value": "rgba(18, 0, 84, 0.82)"
+            "$value": "{velo.primary}"
           }
         }
       }
     },
     "border": {
-      "$value": "#120054",
+      "$value": "{velo.primary}",
       "light": {
         "$value": "rgba(18, 0, 84, 0.15)"
       }
@@ -79,7 +79,7 @@
       "active": {
         "bg": {
           "glass": {
-            "$value": "#120054"
+            "$value": "{velo.primary}"
           }
         }
       },
@@ -113,6 +113,9 @@
       },
       "600": {
         "$value": "#005409"
+      },
+      "700": {
+        "$value": "#143D40"
       }
     },
     "analytics": {
@@ -162,20 +165,21 @@
     },
     "frost": {
       "border": {
-        "$value": "#120054"
+        "$value": "{velo.primary}",
+        "active": {
+          "$value": "{velo.primary}"
+        }
       },
       "bg": {
-        "$value": "rgba(18, 0, 84, 0.15)"
+        "$value": "rgba(18, 0, 84, 0.15)",
+        "active": {
+          "$value": "rgba(18, 0, 84, 0.22)"
+        }
       }
     },
     "control": {
       "border": {
-        "$value": "#120054"
-      }
-    },
-    "on": {
-      "primary": {
-        "$value": "#8EE2C6"
+        "$value": "{velo.primary}"
       }
     },
     "picker": {
@@ -183,7 +187,7 @@
         "$value": "transparent"
       },
       "fg": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       }
     },
     "pink": {
@@ -196,25 +200,32 @@
     },
     "peach": {
       "500": {
-        "$value": "#5B3714"
+        "$value": "#4A2D10"
       },
       "700": {
-        "$value": "#8A5320"
+        "$value": "#4C2E12"
       },
       "800": {
         "$value": "#9A4709"
       }
     },
-    "back": {
-      "bg": {
-        "$value": "#120054"
-      },
-      "fg": {
+    "on": {
+      "accent": {
         "$value": "#8EE2C6"
-      },
-      "glass": {
+      }
+    },
+    "back": {
+      "button": {
         "bg": {
-          "$value": "#120054"
+          "$value": "{velo.primary}"
+        },
+        "fg": {
+          "$value": "#8EE2C6"
+        },
+        "glass": {
+          "bg": {
+            "$value": "{velo.primary}"
+          }
         }
       }
     }
