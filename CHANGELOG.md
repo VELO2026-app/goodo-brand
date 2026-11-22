@@ -1,48 +1,63 @@
 # Changelog
 
-## 0.3.1 (not tagged; a font TRIAL, not the brand font)
+## 0.3.0
 
-Manrope (SIL OFL 1.1, variable 200-800, Latin + Cyrillic subset, 38 KB) as
-the skin font, to see how much of the mockup look the typeface carries.
-The brand font stays Mabry Pro: it needs a licence that allows self-hosting
-(FE-193). Replace `assets/fonts/manrope.woff2` and the `fonts` record when it
-arrives. `text.stroke.strong` is 0: Manrope has real weights, and the faux-bold
-stroke would double them. Needs velo with `--font-heading` bound to
-`--font-body` (velo#175), otherwise five views keep Marmelad headings.
-License text: `licenses/Manrope-OFL.txt`.
+FE-193 (https://linear.app/velo-space/issue/FE-193): bring the Goodo skin
+closer to the designer's mockups (Figma page «Эксперименты · Goodo») and lift
+text/background pairs to WCAG AA. Tokens, one font file; no layout change,
+no new image assets. Contract stays `2.0`.
 
-## 0.3.0 (not tagged yet)
+**Order of release: merge VELO2026-app/velo#175 first, then tag.** The package
+uses velo tokens that exist only after that PR (`validate-skin` refuses an
+unknown token path), so 0.3.0 does not build on an older velo. Nothing in the
+contract number guards this; the order does.
 
-FE-193: bring the Goodo skin closer to the designer's mockups (Figma page
-«Эксперименты · Goodo») and lift the text/background pairs to WCAG AA.
-Tokens only; no layout and no asset changes.
+Overrides of the new velo tokens (velo#175):
+- `frost.border`, `frost.border.active`, `frost.bg`, `frost.bg.active`: tab bar
+  and composer — ink outline and ink-tinted glass instead of the white frame.
+- `control.border`: segment and practice-picker outlines, ink.
+- `on.accent`: mint `#8EE2C6` on accent fills (tab-bar disc, active segment,
+  composer send), 12.0:1 on ink.
+- `picker.bg` transparent, `picker.fg` ink: outlined practice-picker pill.
+- `back.button.bg`, `back.button.glass.bg` ink, `back.button.fg` mint.
+- `text.on.bg.secondary`, `text.on.bg.muted`: opaque ink for text drawn on the
+  screen gradient — 4.7:1 on its darkest lavender zone (82% ink gave 3.9:1).
 
-Requires velo with the FE-193 tokens (velo PR "FE-193 semantic tokens"):
-`validate-skin` refuses a token path the product does not know, so this
-version does not build on an older velo. Contract stays `2.0`.
+Look:
+- Font: Manrope (SIL OFL 1.1, variable 200-800, Latin + Cyrillic subset,
+  38 KB, `licenses/Manrope-OFL.txt`); `text.stroke.strong` 0. It stands in for
+  Mabry Pro, which needs a licence that allows self-hosting.
+- `shadow.glow`, `shadow.glow.sm` none and `shadow.glass` a soft ink shadow:
+  the white glow and white glass highlights are not in the mockups.
 
-New overrides (the 11 velo FE-193 tokens):
-- `frost.border` ink, `frost.bg` ink 15% — tab bar and composer: ink outline
-  and ink-tinted glass instead of the white-glass frame.
-- `control.border` ink — segment and practice-picker pill outlines.
-- `on.primary` mint `#8EE2C6` — tab-bar disc, active segment, composer send.
-- `picker.bg` transparent, `picker.fg` ink — the practice-picker pill is an
-  outlined pill, as in the mockups.
-- `back.bg` ink, `back.fg` mint, `back.glass.bg` ink — back button.
-- `text.on.bg.secondary`, `text.on.bg.muted` ink 82% — text drawn on the
-  screen gradient (4.5:1 on its darkest lavender zone).
+Contrast (golden palette steps the skin had not covered):
+- `text.muted` 50% → 58% ink (4.8:1 on white); `text.secondary` 60% → 67%
+  (6.7:1 on white).
+- `pink.300` `#B3283F`: white text on danger buttons 2.15 → 6.4:1, text on the
+  light pink tint 1.75 → 5.2:1. `pink.700` `#7A2230`. `glass.pink.40` a light
+  tint so the alert banner keeps dark text on a light fill.
+- Warning banner lies directly on the gradient (fill: peach-300 at 40%; worst
+  case over the darkest lavender, about `#AB95B6`): `peach.700` `#4C2E12`
+  (title and icon, was 2.3:1) and `peach.500` `#4A2D10` (body, was 3.8:1),
+  both 4.5:1 or better there.
+- Success banner (teal-300 glass at 40% over the same zone): `teal.700`
+  `#143D40` (title, was 2.0:1). Its body text `teal.600` `#005409` stays at
+  3.5:1 on the darkest zone — it needs a banner-specific token (open).
 
-Contrast fixes of golden palette steps the skin had not covered:
-- `text.muted` 50% → 58% ink (4.5:1 on white), `text.secondary` 60% → 67%
-  (4.5:1 on the light-blue cards and rows).
-- `pink.300` `#B3283F` (white text on danger buttons 2.15 → 6.4:1; text on
-  the pink tint 1.75 → 5.2:1), `pink.700` `#7A2230`, `glass.pink.40` a light
-  tint, so the alert banner keeps dark text on a light fill.
-- `peach.500` `#5B3714`, `peach.700` `#8A5320`, `peach.800` `#9A4709`:
-  warning text on peach fills (1.26 → 4.6:1 and 4.1 → 5.2:1).
+Shared palette steps: `pink.300` and `peach.500` are shared steps, so more than
+the targeted text changes. Consumers found by grep and the key screens looked at; accepted:
+- `--velo-error` border: crimson instead of pink.
+- booking-status dot on the dashboard card (`UserDashboardView`): crimson.
+- admin tab-bar badge: white on crimson (6.4:1).
+- support topic «tech» icon and support-ticket accents: crimson / brown.
+- rating-sheet filled stars (`SupportRatingSheet`): brown `#4A2D10` instead of
+  orange — readable, not pretty; the star colour is a design decision.
+- «Log an activity» quick card (peach glass): brown text; same decision.
+The Goodo palette has no warm accent, so a designed warning/error palette is
+the real fix (FE-193 report, designer brief).
 
-Not done (needs the owner or the designer): the brand font (Mabry Pro), real
-Goodo marks, date-bracket and tab-bar shapes. See the FE-193 report.
+Not in the package (needs the owner or the designer): the brand font itself,
+real Goodo marks, tab-bar disc and back-button shapes, practice-card layout.
 
 ## 0.2.0
 Contract 2.0 for velo token generation 2 (FE-150).

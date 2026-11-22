@@ -27,16 +27,16 @@ assets/                      logos, PWA icons, favicon; assets/bg/
 
 ## Open (owner decisions, not skin data)
 
-- **Font.** Mabry Pro is a licensed face. A package ships its font as a file
-  (`assets/fonts/*.woff2`, listed under `fonts` in `brand.tokens.json`,
-  named in `bare.font-body`) — no external font URL. Needs a licence that
-  allows self-hosting. Until then the skin keeps Marmelad. When it lands,
-  also set `velo.text.stroke.strong` to `0` (Marmelad's faux-bold stroke
-  would double the real Medium weight).
+- **Font.** The design font Mabry Pro is licensed. Until a licence that
+  allows self-hosting arrives, the skin ships Manrope (SIL OFL 1.1, variable
+  200-800, Latin + Cyrillic subset; licence text in `licenses/`), with
+  `velo.text.stroke.strong` at `0` because the faux-bold stroke would double
+  real weights. Replace `assets/fonts/manrope.woff2`, the `fonts` record and
+  `bare.font-body` when Mabry Pro lands.
 - **Marks.** Logo shapes are still the VELO ones (wordmark, V, mandala),
   recoloured to the Goodo palette; the real Goodo marks come from the brand.
 - **Secondary text.** The design draws it at 50% ink (3.66:1 on white); the
-  contract floor is 4.5:1, so it is 60% (5.18:1).
+  contract floor is 4.5:1, so it is 67% (6.66:1).
 - The maskable icon's 80% safe zone is a manual check.
 
 ## Check

@@ -233,6 +233,17 @@
           }
         }
       }
+    },
+    "shadow": {
+      "glow": {
+        "$value": "none",
+        "sm": {
+          "$value": "none"
+        }
+      },
+      "glass": {
+        "$value": "0 8px 24px rgba(18, 0, 84, 0.1)"
+      }
     }
   },
   "bare": {
