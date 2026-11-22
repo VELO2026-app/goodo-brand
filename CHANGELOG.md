@@ -25,7 +25,7 @@ Overrides of the new velo tokens (velo#175):
 
 Look:
 - Font: Manrope (SIL OFL 1.1, variable 200-800, Latin + Cyrillic subset,
-  38 KB, `licenses/Manrope-OFL.txt`); `text.stroke.strong` 0. It stands in for
+  38 KB, `skin/LICENSE`); `text.stroke.strong` 0. It stands in for
   Mabry Pro, which needs a licence that allows self-hosting.
 - `shadow.glow`, `shadow.glow.sm` none and `shadow.glass` a soft ink shadow:
   the white glow and white glass highlights are not in the mockups.
@@ -34,15 +34,17 @@ Contrast (golden palette steps the skin had not covered):
 - `text.muted` 50% → 58% ink (4.8:1 on white); `text.secondary` 60% → 67%
   (6.7:1 on white).
 - `pink.300` `#B3283F`: white text on danger buttons 2.15 → 6.4:1, text on the
-  light pink tint 1.75 → 5.2:1. `pink.700` `#7A2230`. `glass.pink.40` a light
+  light pink tint 1.75 → 5.2:1. `pink.700` `#6A1D2A` (error banner title on the gradient, 4.9:1). `glass.pink.40` a light
   tint so the alert banner keeps dark text on a light fill.
 - Warning banner lies directly on the gradient (fill: peach-300 at 40%; worst
   case over the darkest lavender, about `#AB95B6`): `peach.700` `#4C2E12`
   (title and icon, was 2.3:1) and `peach.500` `#4A2D10` (body, was 3.8:1),
   both 4.5:1 or better there.
-- Success banner (teal-300 glass at 40% over the same zone): `teal.700`
-  `#143D40` (title, was 2.0:1). Its body text `teal.600` `#005409` stays at
-  3.5:1 on the darkest zone — it needs a banner-specific token (open).
+- Success banner (teal-300 glass at 40% over the same zone): `teal.700` `#143D40`
+  (title, was 2.0:1) and `teal.600` `#003A06` (body, was 3.5:1, now 5.0:1). `teal.600` is
+  a shared step (about 20 consumers: success badge and stat-card text, diary
+  card text, three dots and fills); `#005409` → `#003A06` is a slight
+  darkening of the same deep green, accepted.
 
 Shared palette steps: `pink.300` and `peach.500` are shared steps, so more than
 the targeted text changes. Consumers found by grep and the key screens looked at; accepted:

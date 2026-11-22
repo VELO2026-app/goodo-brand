@@ -29,7 +29,7 @@ assets/                      logos, PWA icons, favicon; assets/bg/
 
 - **Font.** The design font Mabry Pro is licensed. Until a licence that
   allows self-hosting arrives, the skin ships Manrope (SIL OFL 1.1, variable
-  200-800, Latin + Cyrillic subset; licence text in `licenses/`), with
+  200-800, Latin + Cyrillic subset; licence text in `skin/LICENSE`), with
   `velo.text.stroke.strong` at `0` because the faux-bold stroke would double
   real weights. Replace `assets/fonts/manrope.woff2`, the `fonts` record and
   `bare.font-body` when Mabry Pro lands.
