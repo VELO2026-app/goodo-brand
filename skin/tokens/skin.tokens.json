@@ -67,6 +67,11 @@
             "$value": "{velo.primary}"
           }
         }
+      },
+      "stroke": {
+        "strong": {
+          "$value": "0"
+        }
       }
     },
     "border": {
@@ -228,6 +233,11 @@
           }
         }
       }
+    }
+  },
+  "bare": {
+    "font-body": {
+      "$value": "'Manrope', 'Noto Sans', sans-serif"
     }
   }
 }
