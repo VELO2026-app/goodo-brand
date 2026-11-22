@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.1 (not tagged; a font TRIAL, not the brand font)
+
+Manrope (SIL OFL 1.1, variable 200-800, Latin + Cyrillic subset, 38 KB) as
+the skin font, to see how much of the mockup look the typeface carries.
+The brand font stays Mabry Pro: it needs a licence that allows self-hosting
+(FE-193). Replace `assets/fonts/manrope.woff2` and the `fonts` record when it
+arrives. `text.stroke.strong` is 0: Manrope has real weights, and the faux-bold
+stroke would double them. Needs velo with `--font-heading` bound to
+`--font-body` (velo#175), otherwise five views keep Marmelad headings.
+License text: `licenses/Manrope-OFL.txt`.
+
 ## 0.3.0 (not tagged yet)
 
 FE-193: bring the Goodo skin closer to the designer's mockups (Figma page

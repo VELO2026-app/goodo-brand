@@ -67,6 +67,11 @@
             "$value": "rgba(18, 0, 84, 0.82)"
           }
         }
+      },
+      "stroke": {
+        "strong": {
+          "$value": "0"
+        }
       }
     },
     "border": {
@@ -217,6 +222,11 @@
           "$value": "#120054"
         }
       }
+    }
+  },
+  "bare": {
+    "font-body": {
+      "$value": "'Manrope', 'Noto Sans', sans-serif"
     }
   }
 }
