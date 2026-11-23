@@ -4,7 +4,14 @@
       "displayName": "Goodo",
       "shortName": "Goodo",
       "themeColor": "#120054",
-      "backgroundColor": "#8EE2C6"
+      "backgroundColor": "#8EE2C6",
+      "fonts": [
+        {
+          "family": "Manrope",
+          "file": "assets/fonts/manrope.woff2",
+          "weight": "200 800"
+        }
+      ]
     }
   }
 }

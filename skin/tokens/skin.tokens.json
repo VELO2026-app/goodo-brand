@@ -19,7 +19,7 @@
     "primary": {
       "$value": "#120054",
       "dark": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       }
     },
     "blue": {
@@ -36,31 +36,46 @@
         "$value": "#70A8C8"
       },
       "500": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       },
       "700": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       }
     },
     "text": {
       "primary": {
-        "$value": "#120054"
+        "$value": "{velo.primary}"
       },
       "secondary": {
-        "$value": "rgba(18, 0, 84, 0.6)"
+        "$value": "rgba(18, 0, 84, 0.67)"
       },
       "muted": {
-        "$value": "rgba(18, 0, 84, 0.5)"
+        "$value": "rgba(18, 0, 84, 0.58)"
       },
       "placeholder": {
         "$value": "rgba(18, 0, 84, 0.6)",
         "faint": {
           "$value": "rgba(18, 0, 84, 0.58)"
         }
+      },
+      "on": {
+        "bg": {
+          "secondary": {
+            "$value": "{velo.primary}"
+          },
+          "muted": {
+            "$value": "{velo.primary}"
+          }
+        }
+      },
+      "stroke": {
+        "strong": {
+          "$value": "0"
+        }
       }
     },
     "border": {
-      "$value": "#120054",
+      "$value": "{velo.primary}",
       "light": {
         "$value": "rgba(18, 0, 84, 0.15)"
       }
@@ -69,7 +84,7 @@
       "active": {
         "bg": {
           "glass": {
-            "$value": "#120054"
+            "$value": "{velo.primary}"
           }
         }
       },
@@ -90,6 +105,11 @@
         "30": {
           "$value": "#A1E0C7"
         }
+      },
+      "pink": {
+        "40": {
+          "$value": "color-mix(in srgb, var(--velo-pink-100) 85%, transparent)"
+        }
       }
     },
     "teal": {
@@ -97,7 +117,10 @@
         "$value": "#8EE2C6"
       },
       "600": {
-        "$value": "#005409"
+        "$value": "#003A06"
+      },
+      "700": {
+        "$value": "#143D40"
       }
     },
     "analytics": {
@@ -144,6 +167,88 @@
       "good": {
         "$value": "#00AE69"
       }
+    },
+    "frost": {
+      "border": {
+        "$value": "{velo.primary}",
+        "active": {
+          "$value": "{velo.primary}"
+        }
+      },
+      "bg": {
+        "$value": "rgba(18, 0, 84, 0.15)",
+        "active": {
+          "$value": "rgba(18, 0, 84, 0.22)"
+        }
+      }
+    },
+    "control": {
+      "border": {
+        "$value": "{velo.primary}"
+      }
+    },
+    "picker": {
+      "bg": {
+        "$value": "transparent"
+      },
+      "fg": {
+        "$value": "{velo.primary}"
+      }
+    },
+    "pink": {
+      "300": {
+        "$value": "#B3283F"
+      },
+      "700": {
+        "$value": "#6A1D2A"
+      }
+    },
+    "peach": {
+      "500": {
+        "$value": "#4A2D10"
+      },
+      "700": {
+        "$value": "#4C2E12"
+      },
+      "800": {
+        "$value": "#9A4709"
+      }
+    },
+    "on": {
+      "accent": {
+        "$value": "#8EE2C6"
+      }
+    },
+    "back": {
+      "button": {
+        "bg": {
+          "$value": "{velo.primary}"
+        },
+        "fg": {
+          "$value": "#8EE2C6"
+        },
+        "glass": {
+          "bg": {
+            "$value": "{velo.primary}"
+          }
+        }
+      }
+    },
+    "shadow": {
+      "glow": {
+        "$value": "none",
+        "sm": {
+          "$value": "none"
+        }
+      },
+      "glass": {
+        "$value": "0 8px 24px rgba(18, 0, 84, 0.1)"
+      }
+    }
+  },
+  "bare": {
+    "font-body": {
+      "$value": "'Manrope', 'Noto Sans', sans-serif"
     }
   }
 }
