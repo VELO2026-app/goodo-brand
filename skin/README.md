@@ -25,6 +25,10 @@ assets/                      logos, PWA icons, favicon; assets/bg/
 | done | `#A1E0C7` on `#005409` | paid / done badge |
 | green | `#00AE69` | check mark, analytics "good" |
 
+Background: `assets/bg/background.png` is the mint to lavender gradient with a 50 %
+white veil (pastel), as in the Goodo App Calendar screen. Content rail
+`velo.rail.pad.x` is 33 px (the Goodo App's 336 px content width).
+
 ## Open (owner decisions, not skin data)
 
 - **Font.** The design font Mabry Pro is licensed. Until a licence that

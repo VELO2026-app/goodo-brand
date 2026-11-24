@@ -1,5 +1,30 @@
 # Changelog
 
+## 0.3.2 (proposed, not tagged)
+
+DSGN-38 (https://linear.app/velo-space/issue/DSGN-38): the look of the native
+Goodo App (the Calendar screen) on the same velo screens. One asset and one
+token; no contract change (the contract stays `2.2`, so this version needs the
+same velo as 0.3.1, PR VELO2026-app/velo#203).
+
+- `assets/bg/background.png`: the same mint to lavender gradient as before, with
+  a 50 % white veil baked in (pastel). Fitted to the owner's screenshot of the
+  Goodo App Calendar: veil t = 0.503, mean absolute error 1.5 of 255 over
+  414 thousand background pixels (corners: top left `#C5EFE1`, right edge at
+  63 % of the height `#BBBCEA`, bottom right `#C0D2E8`). Size and format are
+  unchanged (804x1752, RGBA).
+- `tokens/skin.tokens.json`: `velo.rail.pad.x = "33px"` (was the velo default
+  24px). The rail is read by MobileLayout, VTabBar, VHeader, CalendarView and
+  ChatThreadScreen, so the content and the floating tab bar get the Goodo App's
+  336 px content width on a 402 px screen.
+- `validate-skin`: 0 fail, 1 warn (the same as 0.3.1).
+- Contrast: checked against the darkest and the lightest background pixel under
+  every text of eight screens: none below AA, minimum 4.61:1. Known gap: the
+  white marks (`logo-white.svg`, `mandala-white.png`) are 1.25:1 on the pastel
+  background, so Welcome needs dark variants in those slots (the package already
+  has `mandala-blue.png` and `velo-word-blue.svg`; the brand's own logo is still
+  to come).
+
 ## 0.3.1
 
 FE-261 (https://linear.app/velo-space/issue/FE-261): no «V» in the Goodo
