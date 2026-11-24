@@ -244,6 +244,13 @@
       "glass": {
         "$value": "0 8px 24px rgba(18, 0, 84, 0.1)"
       }
+    },
+    "rail": {
+      "pad": {
+        "x": {
+          "$value": "33px"
+        }
+      }
     }
   },
   "bare": {
