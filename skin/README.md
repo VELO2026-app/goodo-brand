@@ -7,13 +7,23 @@ diff». Converted from the velo skin of generation 1 by
 `frontend/scripts/skin-to-dtcg.mjs` (velo FE-131).
 
 ```
-primer-package.yaml          schema: 1, contract: "2.2" (velo token generation 2; 2.2 = supportMark)
+primer-package.yaml          schema: 1, contract: "2.3" (velo token generation 2; 2.2 = supportMark, 2.3 = mood icons)
 tokens/brand.tokens.json     $extensions["velo-skin"]: displayName, shortName,
                              themeColor, backgroundColor, fonts?
 tokens/skin.tokens.json      W3C DTCG overrides at the paths of velo's
                              frontend/tokens.json (velo.*, bare.font-body)
 assets/                      logos, PWA icons, favicon; assets/bg/
+assets/mood/                 the five mood icons (bad, low, neutral, good, fire)
 ```
+
+## Mood icons
+
+`assets/mood/<key>.svg` replace velo's own faces in the check-in and in every
+other place that shows a mood (contract 2.3). Source: the Figma frame «Check-in ·
+вариант 4» (node 4283:2378). Each file is a radial glow plus the face; the
+face lines are `currentColor` (velo draws them in the ink `#120054`), the glow
+keeps the mood's own color. `viewBox` is the nominal icon box and the glow runs
+out of it. The set is whole or absent: velo refuses four icons of five.
 
 ## Palette (ink + mint + lavender)
 

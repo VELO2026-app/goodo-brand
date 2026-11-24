@@ -22,7 +22,7 @@ packages:
 
 The repository is private: the machine reads it with its deploy key.
 
-Version 0.3.0 needs velo >= PR VELO2026-app/velo#175 (new skin tokens, `validate-skin` refuses unknown paths). Version 0.3.1 needs velo >= PR VELO2026-app/velo#203 (contract 2.2: the brand record's `supportMark`; an older velo refuses the field as unknown).
+Version 0.3.0 needs velo >= PR VELO2026-app/velo#175 (new skin tokens, `validate-skin` refuses unknown paths). Version 0.3.1 needs velo >= PR VELO2026-app/velo#203 (contract 2.2: the brand record's `supportMark`; an older velo refuses the field as unknown). Version 0.4.0 needs velo >= PR VELO2026-app/velo#215 (contract 2.3: the mood icon set `assets/mood/`; an older velo refuses the files), deployed before the tag.
 
 Releases are tags; a released tag is never moved -- an instance goes back to
 a look by its tag. The format and its checks are defined by the product:
