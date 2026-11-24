@@ -7,7 +7,7 @@ diff». Converted from the velo skin of generation 1 by
 `frontend/scripts/skin-to-dtcg.mjs` (velo FE-131).
 
 ```
-primer-package.yaml          schema: 1, contract: "2.0" (velo token generation 2)
+primer-package.yaml          schema: 1, contract: "2.2" (velo token generation 2; 2.2 = supportMark)
 tokens/brand.tokens.json     $extensions["velo-skin"]: displayName, shortName,
                              themeColor, backgroundColor, fonts?
 tokens/skin.tokens.json      W3C DTCG overrides at the paths of velo's
@@ -33,6 +33,10 @@ assets/                      logos, PWA icons, favicon; assets/bg/
   `velo.text.stroke.strong` at `0` because the faux-bold stroke would double
   real weights. Replace `assets/fonts/manrope.woff2`, the `fonts` record and
   `bare.font-body` when Mabry Pro lands.
+- **Support mark.** `supportMark: "icon"` in the brand record (contract 2.2):
+  the support conversation's mark (support chat header, support row of the
+  messages list) is the brand icon `favicon.svg`, not the logo set. The golden
+  skin keeps the logo set there. Splash, Welcome and auth do not read it.
 - **Marks.** There is no «V» in the package since 0.3.1. The app icons
   (`favicon.svg`, `icon-192/512`, `icon-maskable-512`, `apple-touch-icon-180`)
   carry a «G» and the wordmark in `velo-word-*.svg` and `logo-white.svg` reads

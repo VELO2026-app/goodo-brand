@@ -1,11 +1,24 @@
 # Changelog
 
-## 0.3.1 (proposed; the tag is not set)
+## 0.3.1
 
 FE-261 (https://linear.app/velo-space/issue/FE-261): no «V» in the Goodo
-package. PM found the VELO letters in the support avatar and on the splash.
-Assets only; no token, layout or contract change (contract stays `2.0`).
+package, and the support conversation's mark is the brand icon, not the VELO
+logo set. PM found the VELO letters in the support avatar and on the splash.
+Assets plus one brand-record setting; no token or layout change. **The contract
+is now `2.2`**: the new field `supportMark` is unknown to a velo that reads
+contract 2.1 or older and refused there.
 
+**Order of release: velo needs PR VELO2026-app/velo#203 (it reads `supportMark`,
+contract 2.2) before an instance runs this version.** The velo pin in
+`.github/brand-skins.json` is raised in that same PR. This is a temporary
+stand-in until the brand's own marks arrive: the owner released it as it is.
+
+- Brand record: `"supportMark": "icon"` in `tokens/brand.tokens.json`. The support
+  conversation's mark (the header of the support chat at 28 px and the support row
+  of the messages list at 40 px) shows the brand's `favicon.svg` instead of the logo
+  set. The golden VELO skin does not set it and keeps the logo set there. Splash,
+  Welcome and auth do not read it. `primer-package.yaml`: `contract: "2.2"`.
 - App icons: `favicon.svg`, `icon-192.png`, `icon-512.png`,
   `icon-maskable-512.png`, `apple-touch-icon-180.png`. The «V» is now a «G»
   in the same colours (mint `#8EE2C6` on ink `#120054`) and the same size
@@ -23,9 +36,6 @@ Assets only; no token, layout or contract change (contract stays `2.0`).
   file.
 - `validate-skin`: 0 fail, 1 warn (was 2: `velo-word-filled.svg` is no longer
   a golden file). No new golden-identical asset.
-
-Release: tag `v0.3.1` only on the owner's word. After the tag, raise the pin in
-velo `.github/brand-skins.json` (tag and sha) and in the Goodo passport slot.
 
 ## 0.3.0
 

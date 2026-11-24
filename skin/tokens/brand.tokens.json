@@ -11,7 +11,8 @@
           "file": "assets/fonts/manrope.woff2",
           "weight": "200 800"
         }
-      ]
+      ],
+      "supportMark": "icon"
     }
   }
 }
