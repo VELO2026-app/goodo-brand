@@ -1,5 +1,32 @@
 # Changelog
 
+## 0.3.1 (proposed; the tag is not set)
+
+FE-261 (https://linear.app/velo-space/issue/FE-261): no «V» in the Goodo
+package. PM found the VELO letters in the support avatar and on the splash.
+Assets only; no token, layout or contract change (contract stays `2.0`).
+
+- App icons: `favicon.svg`, `icon-192.png`, `icon-512.png`,
+  `icon-maskable-512.png`, `apple-touch-icon-180.png`. The «V» is now a «G»
+  in the same colours (mint `#8EE2C6` on ink `#120054`) and the same size
+  (40 % of the canvas). `icon-maskable-512.png` keeps the mark inside the 80 %
+  safe zone; `apple-touch-icon-180.png` stays opaque (no alpha).
+- Wordmark: `velo-word-filled.svg`, `velo-word-blue.svg` and the word inside
+  `logo-white.svg` read «GOODO» instead of «VELΘ». Same box and same centre as
+  the old word, so velo's logo calibration (`VeloLogo`) is unchanged. The ring
+  in `logo-white.svg` is byte-for-byte the old one.
+- Both marks are outlines of `assets/fonts/manrope.woff2` (the «G» at weight
+  800 plus a 1.6/64 stroke, the word at weight 500). They are placeholders
+  until the brand's own marks arrive.
+- `mandala-white.png` and `mandala-blue.png` (ring art, no letters) are
+  unchanged. `mandala-white.png` is still byte-identical to the golden VELO
+  file.
+- `validate-skin`: 0 fail, 1 warn (was 2: `velo-word-filled.svg` is no longer
+  a golden file). No new golden-identical asset.
+
+Release: tag `v0.3.1` only on the owner's word. After the tag, raise the pin in
+velo `.github/brand-skins.json` (tag and sha) and in the Goodo passport slot.
+
 ## 0.3.0
 
 FE-193 (https://linear.app/velo-space/issue/FE-193): bring the Goodo skin
