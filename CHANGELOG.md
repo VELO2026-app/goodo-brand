@@ -1,5 +1,38 @@
 # Changelog
 
+## 0.4.0 (proposed, not tagged)
+
+FE-273 (https://linear.app/velo-space/issue/FE-273): Goodo's own mood icons in
+the check-in and in every other place that shows a mood. Five SVG files and the
+contract number; no token or layout change. **The contract is now `2.3`**: the
+mood icon set is a new part of the package that a velo reading contract 2.2 or
+older refuses (`assets/mood/...: not a file of the skin format`).
+
+**Order of release: velo needs PR VELO2026-app/velo#215 (it reads
+`assets/mood/`, contract 2.3) deployed BEFORE this version is tagged and before
+an instance runs it.** Tag after that velo is out; then the velo pin in
+`.github/brand-skins.json` is raised in a velo PR, and the instance passport
+goes last. Without the set (0.3.x) the app draws velo's own faces.
+
+- `assets/mood/{bad,low,neutral,good,fire}.svg`: the five icons of the
+  check-in scale from the Figma frame «Check-in · вариант 4» (node 4283:2378,
+  file IV92js0q2cBHmHmDxB0zxM): a radial glow in the mood's color and the
+  hand-drawn face over it. 27-39 KB each, 160 KB in all.
+- The lines are `currentColor`: velo draws them in `--velo-primary-dark`, the
+  ink `#120054`. In Figma the lines of `good` (dark green `#005409`) and `fire`
+  (`#1A1A1A`) have their own colors; they are ink here, one color for all five
+  as the task asks. The glow colors stay in the files (they are the mood).
+- `viewBox` is the nominal icon box (the Figma frame: 41.6, 51.2 or 64 units);
+  the glow runs out of it by 37.5 %, as in the design. velo draws the box at
+  the size of the place and lets the glow overflow.
+- The files are the Figma export with the coordinates rounded to 0.1 and the
+  gradient id renamed to `glow`. Against the original at 3x the render differs
+  in at most 19 pixels per icon (each icon is 30 to 70 thousand pixels;
+  anti-aliasing), no shape is simplified or dropped. Rounding to 0.01 would
+  make the set 65 KB gzip, 0.1 makes it 40 KB.
+- `primer-package.yaml`: `contract: "2.3"`.
+- `validate-skin` (velo FE-273): 0 fail, 1 warn (the same as 0.3.1).
+
 ## 0.3.2 (proposed, not tagged)
 
 DSGN-38 (https://linear.app/velo-space/issue/DSGN-38): the look of the native
