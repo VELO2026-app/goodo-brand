@@ -7,7 +7,7 @@ diff». Converted from the velo skin of generation 1 by
 `frontend/scripts/skin-to-dtcg.mjs` (velo FE-131).
 
 ```
-primer-package.yaml          schema: 1, contract: "2.0" (velo token generation 2)
+primer-package.yaml          schema: 1, contract: "2.2" (velo token generation 2; 2.2 = supportMark)
 tokens/brand.tokens.json     $extensions["velo-skin"]: displayName, shortName,
                              themeColor, backgroundColor, fonts?
 tokens/skin.tokens.json      W3C DTCG overrides at the paths of velo's
@@ -33,8 +33,18 @@ assets/                      logos, PWA icons, favicon; assets/bg/
   `velo.text.stroke.strong` at `0` because the faux-bold stroke would double
   real weights. Replace `assets/fonts/manrope.woff2`, the `fonts` record and
   `bare.font-body` when Mabry Pro lands.
-- **Marks.** Logo shapes are still the VELO ones (wordmark, V, mandala),
-  recoloured to the Goodo palette; the real Goodo marks come from the brand.
+- **Support mark.** `supportMark: "icon"` in the brand record (contract 2.2):
+  the support conversation's mark (support chat header, support row of the
+  messages list) is the brand icon `favicon.svg`, not the logo set. The golden
+  skin keeps the logo set there. Splash, Welcome and auth do not read it.
+- **Marks.** There is no «V» in the package since 0.3.1. The app icons
+  (`favicon.svg`, `icon-192/512`, `icon-maskable-512`, `apple-touch-icon-180`)
+  carry a «G» and the wordmark in `velo-word-*.svg` and `logo-white.svg` reads
+  «GOODO». Both are typeset from the package's own Manrope outlines and are
+  placeholders until the brand's own marks arrive. The ring art
+  (`mandala-*.png`) is still the VELO one, recoloured; `mandala-white.png` is
+  byte-identical to the golden file (`validate-skin` warns). The real Goodo
+  marks come from the brand.
 - **Secondary text.** The design draws it at 50% ink (3.66:1 on white); the
   contract floor is 4.5:1, so it is 67% (6.66:1).
 - The maskable icon's 80% safe zone is a manual check.
