@@ -1,18 +1,67 @@
 # Changelog
 
-## 0.4.0 (proposed, not tagged)
+## 0.4.0 (2026-11-25)
+
+Variant 4 of DSGN-38 (https://linear.app/velo-space/issue/DSGN-38) becomes the
+Goodo skin: the look of the native Goodo App (pastel background, 33 px rail),
+Goodo's own mood icons, and the brand's own logo instead of the stand-ins.
+Three changes in one release, **contract `2.3`**: the old 0.3.2 section below
+was never tagged and ships here.
+
+**Order of release.** velo PR VELO2026-app/velo#215 (it reads `assets/mood/`,
+contract 2.3) is already in velo's `deploy-machine`; a velo without it refuses
+this package (`assets/mood/...: not a file of the skin format`). So: tag
+`v0.4.0` on this `main`, then a velo PR raises the pin in
+`.github/brand-skins.json` (tag and sha; CI builds and shoots it), then the
+instance passport goes last. Without the set (0.3.x) the app draws velo's own
+faces.
+
+### Logo (FE-261 №7 and №4, from the designer's Figma vectors)
+
+FE-261 (https://linear.app/velo-space/issue/FE-261): the splash, Welcome and
+auth showed a stand-in «GOODO» word and the VELO ring art; the support avatar
+and the app icons carried a «G» typeset from Manrope. They are now the
+designer's vectors from the Figma file IV92js0q2cBHmHmDxB0zxM, page
+«Эксперименты · Goodo»: «Логотип Goodo / индиго» (node 4270:3428), «Логотип
+Goodo / белый» (4270:3435), «Знак Goodo / мятный» (4270:3442). The vector paths
+are the Figma SVG export, copied as they are; only the wrapper changed (one
+`transform` group instead of the export's clip and mask).
+
+- `velo-word-filled.svg` and `velo-word-blue.svg`: the indigo word `#120054`.
+  Same box and centre as the stand-in word (402x492 canvas, centre 201, 252;
+  299.8 wide in `velo-word-filled.svg`, 166.5 wide in `velo-word-blue.svg`, which
+  `VeloLogo` scales 1.8x), so velo's logo calibration is unchanged. Dark, so the
+  word reads on the pastel background (the white marks were 1.25:1 there).
+- `logo-white.svg`: the white word, same box. The VELO ring that was inside it is
+  gone (it was a 318 KB file, now 5 KB).
+- `mandala-white.png`, `mandala-blue.png`: fully transparent 492x492 PNGs. The
+  logo set must have both ring files (`validate-skin` refuses a half set), but
+  the Goodo logo has no ring, so the slot is empty on purpose. The spinning ring
+  of the splash is therefore invisible and only the word shows. These were the
+  VELO ring art, recoloured; `mandala-white.png` was byte-identical to the golden
+  file (the last `validate-skin` warning).
+- `favicon.svg`, `icon-192.png`, `icon-512.png`, `icon-maskable-512.png`,
+  `apple-touch-icon-180.png`: the mint sign `#A1E0C7` on the ink `#120054`
+  (circle for the favicon and the two non-maskable icons, full square for
+  the maskable and the touch icon, which stays opaque). The sign is 56 % of the
+  side wide; its half diagonal is 0.35 of the side, inside the maskable 80 %
+  safe zone (0.4). The favicon is also the support mark (`supportMark: "icon"`).
+- Not done here: FE-261 №1 (the onboarding illustrations: the package has no
+  `assets/onboarding/` slot content; they come from the designer).
+- `validate-skin` (velo `deploy-machine` 359134c9): 0 fail, 0 warn.
+
+### Pastel background and 33 px rail (DSGN-38, was 0.3.2)
+
+See the 0.3.2 section below (PR #5). The known gap it names, white marks on the
+pastel background, is closed by the logo above.
+
+### Mood icons (FE-273, PR #6)
 
 FE-273 (https://linear.app/velo-space/issue/FE-273): Goodo's own mood icons in
 the check-in and in every other place that shows a mood. Five SVG files and the
 contract number; no token or layout change. **The contract is now `2.3`**: the
 mood icon set is a new part of the package that a velo reading contract 2.2 or
 older refuses (`assets/mood/...: not a file of the skin format`).
-
-**Order of release: velo needs PR VELO2026-app/velo#215 (it reads
-`assets/mood/`, contract 2.3) deployed BEFORE this version is tagged and before
-an instance runs it.** Tag after that velo is out; then the velo pin in
-`.github/brand-skins.json` is raised in a velo PR, and the instance passport
-goes last. Without the set (0.3.x) the app draws velo's own faces.
 
 - `assets/mood/{bad,low,neutral,good,fire}.svg`: the five icons of the
   check-in scale from the Figma frame «Check-in · вариант 4» (node 4283:2378,
@@ -33,7 +82,7 @@ goes last. Without the set (0.3.x) the app draws velo's own faces.
 - `primer-package.yaml`: `contract: "2.3"`.
 - `validate-skin` (velo FE-273): 0 fail, 1 warn (the same as 0.3.1).
 
-## 0.3.2 (proposed, not tagged)
+## 0.3.2 (not tagged; shipped in 0.4.0)
 
 DSGN-38 (https://linear.app/velo-space/issue/DSGN-38): the look of the native
 Goodo App (the Calendar screen) on the same velo screens. One asset and one

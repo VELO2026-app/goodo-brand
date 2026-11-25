@@ -12,7 +12,7 @@ tokens/brand.tokens.json     $extensions["velo-skin"]: displayName, shortName,
                              themeColor, backgroundColor, fonts?
 tokens/skin.tokens.json      W3C DTCG overrides at the paths of velo's
                              frontend/tokens.json (velo.*, bare.font-body)
-assets/                      logos, PWA icons, favicon; assets/bg/
+assets/                      logo words, empty ring slots, PWA icons, favicon; assets/bg/
 assets/mood/                 the five mood icons (bad, low, neutral, good, fire)
 ```
 
@@ -51,14 +51,15 @@ white veil (pastel), as in the Goodo App Calendar screen. Content rail
   the support conversation's mark (support chat header, support row of the
   messages list) is the brand icon `favicon.svg`, not the logo set. The golden
   skin keeps the logo set there. Splash, Welcome and auth do not read it.
-- **Marks.** There is no «V» in the package since 0.3.1. The app icons
-  (`favicon.svg`, `icon-192/512`, `icon-maskable-512`, `apple-touch-icon-180`)
-  carry a «G» and the wordmark in `velo-word-*.svg` and `logo-white.svg` reads
-  «GOODO». Both are typeset from the package's own Manrope outlines and are
-  placeholders until the brand's own marks arrive. The ring art
-  (`mandala-*.png`) is still the VELO one, recoloured; `mandala-white.png` is
-  byte-identical to the golden file (`validate-skin` warns). The real Goodo
-  marks come from the brand.
+- **Marks.** Since 0.4.0 the marks are the designer's vectors (Figma file
+  IV92js0q2cBHmHmDxB0zxM, page «Эксперименты · Goodo»): the indigo word in
+  `velo-word-filled.svg` and `velo-word-blue.svg` (node 4270:3428), the white
+  word in `logo-white.svg` (4270:3435), and the mint sign (4270:3442) on the
+  ink in the app icons (`favicon.svg`, `icon-192/512`, `icon-maskable-512`,
+  `apple-touch-icon-180`). The vector paths are the Figma SVG export as it is.
+  The Goodo logo has no ring, so `mandala-white.png` and `mandala-blue.png`
+  are fully transparent (the logo set ships whole or not at all). There is no
+  «V» and no VELO art in the package.
 - **Secondary text.** The design draws it at 50% ink (3.66:1 on white); the
   contract floor is 4.5:1, so it is 67% (6.66:1).
 - The maskable icon's 80% safe zone is a manual check.
